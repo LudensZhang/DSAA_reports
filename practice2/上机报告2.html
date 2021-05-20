@@ -1,0 +1,598 @@
+<!DOCTYPE html><html><head>
+      <title>&#x4E0A;&#x673A;&#x62A5;&#x544A;2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\iceQH\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.18\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="center%E4%B8%8A%E6%9C%BA%E6%8A%A5%E5%91%8A%E4%BA%8Ccenter"><center>&#x4E0A;&#x673A;&#x62A5;&#x544A;&#xFF08;&#x4E8C;&#xFF09;</center></h1>
+
+<h3 class="mume-header" id="center%E7%99%BB%E5%B3%B01901-%E5%BC%A0%E7%9A%93%E9%B8%BF-center"><center>&#x767B;&#x5CF0;1901 &#x5F20;&#x7693;&#x9E3F; </center></h3>
+
+<h4 class="mume-header" id="%E9%80%92%E5%BD%92%E5%BB%BA%E7%AB%8B%E4%BA%8C%E5%8F%89%E6%A0%91">&#x9012;&#x5F52;&#x5EFA;&#x7ACB;&#x4E8C;&#x53C9;&#x6811;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>bitree buildtree()          //&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x6811;
+{
+    char c;
+    node *p;
+    c=getchar();
+    if(c==&apos;0&apos;)return(0);
+    p=new(node);
+    p-&gt;data=c;
+    p-&gt;lchild=buildtree();
+    p-&gt;rchild=buildtree();
+    return(p);
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x6839;&#x636E;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x9012;&#x5F52;&#x6784;&#x5EFA;&#xFF0C;&#x5E8F;&#x5217;&#x4E2D;&#x6709;0&#x5219;&#x8FD4;&#x56DE;0&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91">&#x975E;&#x9012;&#x5F52;&#x65B9;&#x6CD5;&#x524D;&#x5E8F;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x6811;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>void preorder(bitree t)//&#x975E;&#x9012;&#x5F52;&#x5148;&#x5E8F;&#x5B9E;&#x73B0;
+{
+    sequeue Q;
+    Q.first=Q.tail=0;//&#x7F6E;&#x6808;&#x7A7A;
+
+    while((t)||!QStackEmpty(Q))
+    {
+        while(t)
+        {
+            printf(&quot;%c&quot;, t-&gt;data);
+            if(t-&gt;rchild!=NULL)
+                QStackPush(Q,t-&gt;rchild);//&#x5165;&#x6808;
+            t = t-&gt;lchild;
+        }
+        if (!QStackEmpty(Q)) {
+            QStackPop(Q,t);
+        }
+    }
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x6808;&#x8FDB;&#x884C;&#x975E;&#x9012;&#x5F52;&#x904D;&#x5386;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E5%89%8D%E4%B8%AD%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86">&#x9012;&#x5F52;&#x65B9;&#x6CD5;&#x524D;&#xFF0C;&#x4E2D;&#xFF0C;&#x540E;&#x5E8F;&#x904D;&#x5386;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>void DLR(bitree root){        //&#x9012;&#x5F52;&#x5148;&#x5E8F;&#x4E8C;&#x53C9;&#x6811;
+    if(!root)return;
+    printf(&quot;%c&quot;, root-&gt;data);
+    DLR(root-&gt;lchild);
+    DLR(root-&gt;rchild);
+}
+
+void LDR(bitree root)        //&#x9012;&#x5F52;&#x4E2D;&#x5E8F;&#x4E8C;&#x53C9;&#x6811;
+{
+    if(!root)return;
+    LDR(root-&gt;lchild);
+    printf(&quot;%c&quot;,root-&gt;data);
+    LDR(root-&gt;rchild);
+}
+
+void LRD (bitree root)      //&#x9012;&#x5F52;&#x540E;&#x5E8F;&#x4E8C;&#x53C9;&#x6811;
+{
+    if(!root)return;
+    LRD(root-&gt;lchild);
+    LRD(root-&gt;rchild);
+    printf(&quot;%c&quot;,root-&gt;data);
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5728;&#x9012;&#x5F52;&#x7684;&#x4E0D;&#x540C;&#x6B65;&#x9AA4;&#x8FDB;&#x884C;&#x5185;&#x5BB9;&#x8F93;&#x51FA;&#x5F97;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x904D;&#x5386;&#x987A;&#x5E8F;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E5%B0%86%E4%BA%8C%E5%8F%89%E6%A0%91%E5%AF%B9%E7%A7%B0%E4%BA%A4%E6%8D%A2%E5%8D%B3%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E9%95%9C%E5%83%8F">&#x5C06;&#x4E8C;&#x53C9;&#x6811;&#x5BF9;&#x79F0;&#x4EA4;&#x6362;&#xFF0C;&#x5373;&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x955C;&#x50CF;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>Status mirror_tree(bitree root){      //&#x955C;&#x50CF;&#x4E8C;&#x53C9;&#x6811;
+    if(!root)return 0;
+    node *p = root-&gt;rchild;
+    root-&gt;rchild = root-&gt;lchild;
+    root-&gt;lchild = p;
+    mirror_tree(root-&gt;lchild);
+    mirror_tree(root-&gt;rchild);
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x9012;&#x5F52;&#x7684;&#x65B9;&#x5F0F;&#x4EA4;&#x6362;&#x5404;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%AB%98%E5%BA%A6%E5%8D%B3%E6%B7%B1%E5%BA%A6">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x5373;&#x6DF1;&#x5EA6;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>int tree_height(bitree root){     //&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x9AD8;&#x5EA6;
+
+    if(!root)return 0;
+    if(root &amp;&amp; !root-&gt;lchild &amp;&amp; !root-&gt;rchild)return 1;
+    if(tree_height(root-&gt;lchild) &gt;= tree_height(root-&gt;rchild))
+        return tree_height(root-&gt;lchild)+1;
+    else return tree_height(root-&gt;rchild)+1;
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x9012;&#x5F52;&#x7684;&#x65B9;&#x5F0F;&#x4F9D;&#x6B21;&#x7D2F;&#x52A0;&#x8BA1;&#x7B97;&#x4E8C;&#x53C9;&#x6811;&#x9AD8;&#x5EA6;&#xFF0C;&#x5E76;&#x5728;&#x5404;&#x4E2A;&#x8282;&#x70B9;&#x53D6;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x9AD8;&#x5EA6;&#x66F4;&#x9AD8;&#x7684;&#x5B50;&#x6811;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E5%B7%B2%E7%9F%A5%E5%89%8D%E5%BA%8F%E5%BA%8F%E5%88%97%E5%92%8C%E4%B8%AD%E5%BA%8F%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91">&#x5DF2;&#x77E5;&#x524D;&#x5E8F;&#x5E8F;&#x5217;&#x548C;&#x4E2D;&#x5E8F;&#x5E8F;&#x5217;&#xFF0C;&#x6784;&#x9020;&#x4E8C;&#x53C9;&#x6811;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>bitree BuTrPM(sqlist s1, sqlist s2)
+{   int j,l1,l2,h1,h2; char c; node *p;
+    l1=s1.low;l2=s2.low;h1=s1.high;h2=s2.high;
+    if(l1 &gt; h1 || l2 &gt; h2)   return(0);           //&#x9012;&#x5F52;&#x51FA;&#x53E3;
+    c=s1.ch[s1.low];        //&#x7531;&#x5148;&#x5E8F;&#x904D;&#x5386;&#x5E8F;&#x5217;&#x786E;&#x5B9A;&#x6839;
+    p=new(node); p-&gt;data=c;                   //&#x751F;&#x6210;&#x6839;&#x7ED3;&#x70B9;
+    for(j=s2.low;j&lt;=s2.high;j++)
+        if(c==s2.ch[j]) break;    //&#x5728;&#x4E2D;&#x5E8F;&#x5E8F;&#x5217;&#x627E;&#x6839;&#x7684;&#x4F4D;&#x7F6E;j
+    s1.low=l1+1; s1.high=l1+j-l2; s2.low=l2;s2.high=j-1;
+    p-&gt;lchild= BuTrPM(s1,s2);         //&#x9012;&#x5F52;&#x6784;&#x5EFA;&#x5DE6;&#x5B50;&#x6811;
+    s1.low=l1+j-l2+1; s1.high=h1; s2.low=j+1; s2.high=h2;
+    p-&gt;rchild= BuTrPM(s1,s2);         //&#x9012;&#x5F52;&#x6784;&#x5EFA;&#x53F3;&#x5B50;&#x6811;
+    return(p);
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x89C1;&#x6CE8;&#x91CA;&#xFF0C;&#x5229;&#x7528;&#x524D;&#x5E8F;&#x4E2D;&#x5E8F;&#x9012;&#x5F52;&#x786E;&#x5B9A;&#x6839;&#x4E0E;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E5%88%86%E5%B1%82%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91%E5%8D%B3%E6%8C%89%E5%B1%82%E6%AC%A1%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E4%BB%8E%E5%B7%A6%E5%BE%80%E5%8F%B3%E9%A1%BA%E5%BA%8F%E8%AE%BF%E9%97%AE">&#x5206;&#x5C42;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5373;&#x6309;&#x5C42;&#x6B21;&#x4ECE;&#x4E0A;&#x5F80;&#x4E0B;&#xFF0C;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x987A;&#x5E8F;&#x8BBF;&#x95EE;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>void PrintSeqTree(SeqTree tree)
+{
+	for(int i = 0 ; i &lt; MAX_SIZE ; i++)
+	{
+		printf(&quot;%c&quot;,tree[i]);
+	}	
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x91C7;&#x7528;&#x987A;&#x5E8F;&#x7ED3;&#x6784;&#x5B58;&#x50A8;&#x6811;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%8D%B3%E6%B1%82%E6%9C%80%E5%A4%A7%E7%BB%93%E7%82%B9%E6%95%B0%E7%9A%84%E5%B1%82%E6%89%80%E5%85%B7%E6%9C%89%E7%9A%84%E7%BB%93%E7%82%B9%E6%95%B0">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x5373;&#x6C42;&#x6700;&#x5927;&#x7ED3;&#x70B9;&#x6570;&#x7684;&#x5C42;&#x6240;&#x5177;&#x6709;&#x7684;&#x7ED3;&#x70B9;&#x6570;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>int tree_width(bitree  T) {    //&#x8BA1;&#x7B97;&#x5BBD;&#x5EA6;
+    bitree Qu[20];
+    int w[10];
+    int front = -1, rear = -1;
+    int last = 0, level = 1;
+    bitree p = T;
+    Qu[++rear] = p;
+    if (p == NULL) return 0;
+    w[level] = 1;
+    while (rear &gt; front)
+    {
+
+        p = Qu[++front];
+        if (p-&gt;lchild) {
+            Qu[++rear] = p-&gt;lchild;
+        }
+        if (p-&gt;rchild)
+            Qu[++rear] = p-&gt;rchild;
+
+        if (front == last) {
+            w[++level] = rear - last;
+            last = rear;
+        }
+    }
+    int max = 0;
+    for (int i = 1; i &lt;= level; i++) {
+        if (w[i] &gt; max) {
+            max = w[i];
+        }
+    }
+    return max;
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x6808;&#x5C06;&#x6BCF;&#x4E00;&#x5C42;&#x8282;&#x70B9;&#x6570;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x5C06;&#x6700;&#x5927;&#x503C;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E7%9A%84%E7%BB%93%E7%82%B9%E4%B8%AA%E6%95%B0">&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>int dot_count(bitree root){    //&#x8BA1;&#x7B97;&#x8282;&#x70B9;&#x6570;
+    if(!root)
+        return 0;
+    return (dot_count(root-&gt;rchild)+dot_count(root-&gt;lchild)+1);
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x9012;&#x5F52;&#x8FD4;&#x56DE;&#x5DE6;&#x53F3;&#x5B50;&#x6811;&#x7684;&#x8282;&#x70B9;&#x6570;&#x4E4B;&#x548C;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E9%9D%9E%E9%80%92%E5%BD%92%E6%96%B9%E6%B3%95%E4%B8%AD%E5%BA%8F-%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91">&#x975E;&#x9012;&#x5F52;&#x65B9;&#x6CD5;&#x4E2D;&#x5E8F;&#x3001;&#x540E;&#x5E8F;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x6811;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>void postorder(bitree t)//&#x8FD9;&#x662F;&#x975E;&#x9012;&#x5F52;&#x540E;&#x5E8F;&#x5B9E;&#x73B0;&#xFF0C;&#x4E5F;&#x9002;&#x5408;&#x5148;&#x5E8F;/&#x4E2D;&#x5E8F;
+{
+    if(!t)return;
+    bitree lastvist=t;//&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x53EA;&#x8981;&#x662F;&#x5730;&#x5740;,&#x4E14;&#x4E0D;&#x4E3A;0&#x5373;&#x53EF;!
+    seqstack s;
+    s.top = -1;//&#x7F6E;&#x6808;&#x7A7A;
+    while(t||s.top != -1)
+    {
+        while(t)
+        {
+            //printf(&quot;%c&quot;, t-&gt;data);//&#x4E5F;&#x9002;&#x5408;&#x5148;&#x5E8F;
+            s.a[++s.top] = t;//&#x5165;&#x6808;
+            t=t-&gt;lchild;
+        }
+        t=s.a[s.top];
+        if(t-&gt;rchild!=lastvist)
+        {
+            //printf(&quot;%c&quot;, t-&gt;data);//&#x4E5F;&#x9002;&#x5408;&#x4E2D;&#x5E8F;
+            t=t-&gt;rchild;
+            if(!t)
+                lastvist=t;
+        }
+        else
+        {
+            printf(&quot;%c&quot;, t-&gt;data);//&#x9002;&#x5408;&#x540E;&#x5E8F;
+            s.top--;    //&#x51FA;&#x6808;
+            lastvist=t;//&#x66F4;&#x65B0;
+            t=0;//&#x4F7F;&#x4E0B;&#x4E00;&#x5FAA;&#x73AF;&#x76F4;&#x63A5;&#x53D6;&#x6808;&#x9876;
+        }
+    }
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5C06;lastvisit&#x4FDD;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x6808;&#x4E2D;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%AC%ACk%E5%B1%82%E7%9A%84%E7%BB%93%E7%82%B9%E4%B8%AA%E6%95%B0">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7B2C;K&#x5C42;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>int k_layer_dot(bitree  T, int k) {   //&#x8BA1;&#x7B97;k&#x5C42;&#x8282;&#x70B9;&#x6570;
+    bitree Qu[20];
+    int w[10];
+    int front = -1, rear = -1;
+    int last = 0, level = 1;
+    bitree p = T;
+    Qu[++rear] = p;
+    if (p == NULL) return 0;
+    w[level] = 1;
+    while (rear &gt; front)
+    {
+
+        p = Qu[++front];
+        if (p-&gt;lchild) {
+            Qu[++rear] = p-&gt;lchild;
+        }
+        if (p-&gt;rchild)
+            Qu[++rear] = p-&gt;rchild;
+
+        if (front == last) {
+            w[++level] = rear - last;
+            last = rear;
+        }
+    }
+    if(k &gt; level)return 0;
+    else return w[k];
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x6808;&#x5C06;&#x6BCF;&#x4E00;&#x5C42;&#x8282;&#x70B9;&#x6570;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x5C06;&#x6307;&#x5B9A;&#x5C42;&#x8282;&#x70B9;&#x6570;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%8F%B6%E5%AD%90%E7%BB%93%E7%82%B9%E7%9A%84%E4%B8%AA%E6%95%B0">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x7684;&#x4E2A;&#x6570;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>int leaf_count(bitree root){  //&#x8BA1;&#x7B97;&#x53F6;&#x5B50;&#x6570;
+    if(!root)
+        return 0;
+    else if(!root-&gt;lchild &amp;&amp; !root-&gt;rchild)
+        return 1;
+    else
+        return(leaf_count(root-&gt;lchild)+ leaf_count(root-&gt;rchild));
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x9012;&#x5F52;&#x8F93;&#x51FA;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E5%88%A4%E6%96%AD%E4%B8%A4%E6%A3%B5%E4%BA%8C%E5%8F%89%E6%A0%91%E6%98%AF%E5%90%A6%E7%BB%93%E6%9E%84%E7%9B%B8%E5%90%8C">&#x5224;&#x65AD;&#x4E24;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x5426;&#x7ED3;&#x6784;&#x76F8;&#x540C;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>bool structure_same(bitree t1, bitree t2){  //&#x5224;&#x65AD;&#x7ED3;&#x6784;&#x662F;&#x5426;&#x76F8;&#x540C;
+    if(!t1 &amp;&amp; !t2)
+        return true;
+    else if(!t1 || !t2)
+        return false;
+    return (structure_same(t1-&gt;lchild, t2-&gt;lchild) &amp;&amp; structure_same(t1-&gt;rchild, t2-&gt;rchild));
+
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5229;&#x7528;&#x9012;&#x5F52;&#xFF0C;&#x9010;&#x5C42;&#x5224;&#x65AD;&#x7ED3;&#x6784;&#x662F;&#x5426;&#x76F8;&#x4F3C;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)&#x3002;</li>
+</ol>
+<h4 class="mume-header" id="%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E4%B8%A4%E4%B8%AA%E7%BB%93%E7%82%B9%E7%9A%84%E6%9C%80%E4%BD%8E%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88%E7%BB%93%E7%82%B9">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x6700;&#x4F4E;&#x516C;&#x5171;&#x7956;&#x5148;&#x7ED3;&#x70B9;</h4>
+
+<pre data-role="codeBlock" data-info class="language-"><code>bitree lowest_ancestor(bitree root, bitree t1, bitree t2){   //&#x5BFB;&#x627E;&#x6700;&#x4F4E;&#x7956;&#x5148;&#x8282;&#x70B9;
+    if (root == NULL || t1 == NULL || t2 == NULL)
+        return NULL;
+
+    if (t1 == root || t2 == root)
+        return root;
+
+    bitree* cur = NULL;
+
+    node * left_ancestor = lowest_ancestor(root-&gt;lchild, t1, t2);
+    node *right_ancestor = lowest_ancestor(root-&gt;rchild, t1, t2);
+    if (left_ancestor &amp;&amp; right_ancestor)
+        return root;
+    if (left_ancestor == NULL)
+        return right_ancestor;
+    else
+        return left_ancestor;
+}
+</code></pre><ol>
+<li>&#x601D;&#x8DEF;&#xFF1A;&#x5206;&#x522B;&#x5224;&#x65AD;&#x8282;&#x70B9;&#x662F;&#x5426;&#x4E3A;&#x6240;&#x7ED9;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x7956;&#x5148;&#x8282;&#x70B9;&#xFF0C;&#x76F4;&#x81F3;&#x627E;&#x5230;&#x6700;&#x4F4E;&#x7956;&#x5148;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)&#x3002;</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
